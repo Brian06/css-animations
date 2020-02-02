@@ -1,0 +1,47 @@
+body {
+	background: #bdc3c7;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to bottom, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	min-height: 100vh;
+}
+
+.main-container {
+	display: flex;
+}
+
+/* Hover 1 */
+
+button {
+	color: #262626;
+	font-family: sans-serif;
+	font-size: 20px;
+	border: 2px solid #818889;
+	padding: 20px 20px;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+button:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: #fff200;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	transform-origin: top right;
+ 	transform: rotate(90deg);
+	transition: transform 1s;
+}
+
+button:hover:before {
+	transform: rotate(0deg);
+}
+
+/* Hover 2 */
