@@ -7,15 +7,15 @@ body {
 
 .main-container {
 	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
 }
-
-/* Hover 1 */
 
 button {
 	color: #262626;
 	font-family: sans-serif;
 	font-size: 20px;
-	border: 2px solid #818889;
+	margin: 5px;
 	padding: 20px 20px;
 	position: relative;
 	z-index: 1;
@@ -26,7 +26,13 @@ button:hover {
 	cursor: pointer;
 }
 
-button:before {
+/* Hover 1 */
+
+.button--1 {
+	border: 2px solid #818889;
+}
+
+.button--1:before {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -37,11 +43,38 @@ button:before {
 	z-index: -1;
 	transform-origin: top right;
  	transform: rotate(90deg);
-	transition: transform 1s;
+	transition: all 1s;
 }
 
-button:hover:before {
+.button--1:hover:before {
 	transform: rotate(0deg);
 }
 
 /* Hover 2 */
+
+.button--2 {
+	color: #451435;
+	transition: color 1s;
+	border: 2px solid #818889;
+}
+
+.button--2:hover {
+	color: #FFF;
+}
+
+.button--2:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: #451435;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+ 	transform: translateX(-100%);
+	transition: all 1s;
+}
+
+.button--2:hover:before {
+	transform: translateX(0);
+}
