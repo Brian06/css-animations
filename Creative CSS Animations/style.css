@@ -78,3 +78,50 @@ button:hover {
 .button--2:hover:before {
 	transform: translateX(0);
 }
+
+/* Hover 3 */
+
+.button--3 {
+	color: #262626;
+	border: 2px solid #262626;
+	transition: color 1s;
+}
+
+.button--3:hover {
+	color: #FFF;
+}
+
+.button--3:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #262626;
+	transform: rotateX(90deg);
+	z-index: -1;
+	transition: all 1s;
+}
+
+.button--3:hover:before {
+	transform: rotateX(0deg);
+}
+
+.button--3:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #262626;
+	transform: rotateY(90deg);
+	z-index: -1;
+	transition: all 1s;
+}
+
+.button--3:hover::after {
+	transform: rotateY(0deg);
+}
+
